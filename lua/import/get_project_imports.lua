@@ -46,6 +46,7 @@ local function get_project_imports(config)
   local imports = {}
 
   for _, result in ipairs(results) do
+    result = result:gsub("[\r]+$", "")
     table.insert(imports, { value = result })
   end
 

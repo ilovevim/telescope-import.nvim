@@ -5,7 +5,8 @@ local regex = {
   javascript = [[^(?:import(?:[\"'\s]*([\w*{}\n, ]+)from\s*)?[\"'\s](.*?)[\"'\s].*)]],
   lua = [[^local (\w+) = require\(?[\"'](.*?)[\"']\)?]],
   php = [[^\s*use\s+([\w\\]+)(?:\s*;)?]],
-  python = [[(?m)^(?:from[ ]+(\S+)[ ]+)?import[ ]+(\S+)[ ]*$]],
+  -- python = [[(?m)^(?:from[ ]+(\S+)[ ]+)?import[ ]+(\S+)[ ]*$]],
+  python = [[(?m)^(?:from[ ]+(\S+)[ ]+)?import[ ]+([\w, ]+)*[\r]*$]],
   shell = [[^(?:source\s+)]],
   swift = [[^import\s+(\w+)\s*$]],
 }
